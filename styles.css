@@ -1,0 +1,57 @@
+#app-container {
+	width: 480px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.header {
+	font-weight: bold;
+	height: 10px;
+}
+
+.row {
+	clear: both;
+	height: 24px;
+}
+
+.task {
+	width: 200px;
+}
+
+.name {
+	width: 200px;
+}
+
+.task-wrapper {
+	width: 240px;
+	float: left;
+}
+
+.name-wrapper {
+	width: 240px;
+	float: left;
+}
+
+.add {
+	margin-top: 18px;
+	height: 24px;
+	clear: both;
+}
+
+input {
+	width: 200px;
+}
+
+#list-container {
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+button {
+	margin-top: 30px;
+}
