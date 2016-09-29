@@ -13,10 +13,25 @@ var ShiftRowList = React.createClass({
   },
 
   rotate: function() {
-    var last = this.state.rows.length - 1;
+    
+    var newRows = [];
+    var rows = this.state.rows;
+    var end = rows.length - 1;
+
+    newRows.push(
+      <ShiftRow task={rows[0].props.task} name={rows[end].props.name} />
+    );
+
+    for (var i = 0; i < end; i++) {
+      newRows.push(
+        <ShiftRow task={rows[i + 1].props.task} name={rows[i].props.name} />
+      );
+    }
+
     this.setState({
-      rows: [this.state.rows[last]].concat(this.state.rows.slice(0, last))
+      rows: newRows
     });
+
   },
 
   render: function() {
